@@ -14,8 +14,16 @@
   }
 } */
 
+.section-container {
+  width: 1000px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Montserrat", serif;
+}
+
+.animate {
+  transition: all ease-in-out 0.1s;
 }
