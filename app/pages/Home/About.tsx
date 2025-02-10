@@ -4,7 +4,7 @@ import ClientGroup from "@/app/Components/Home/ClientGroup";
 const About = () => {
   return (
     <>
-      <section className="w-[100vw] flex justify-center items-center">
+      <section className="flex justify-center items-center">
         <div className="section-container flex flex-row justify-around items-center">
           <div className="flex justify-start items-start flex-col w-[30vw] gap-4">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-colorPrimaryDark to-colorPrimary bg-clip-text text-colorWhite/0">

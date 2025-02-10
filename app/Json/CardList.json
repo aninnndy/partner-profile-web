@@ -2,19 +2,19 @@
   {
     "thumbnail": "/img/projects/Clinic-System.png",
     "name": "Fast Medika Center",
-    "categories": "Clinic Management System",
+    "categories": "Clinic-Management-System",
     "features": "Appointment-Online"
   },
   {
     "thumbnail": "/img/projects/Bank-DJP-TV.png",
     "name": "Bank DJP",
-    "categories": "Multi Android TV",
+    "categories": "Queue-System",
     "features": "Online-Schedule"
   },
   {
     "thumbnail": "/img/projects/Bank-DJP-Queue.png",
     "name": "Queue Point Bank DJP",
-    "categories": "System Antrian",
+    "categories": "Queue-System",
     "features": "Loket-Antrian Informasi-Antrian Manajemen-Antrian"
   },
   {

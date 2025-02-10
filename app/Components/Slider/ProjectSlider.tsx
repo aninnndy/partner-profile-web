@@ -13,7 +13,7 @@ const BlankArrow = () => {
 const ProjectSlider = () => {
   const settings = {
     className:
-      "w-[100vw] flex justify-center items-center gap-12 outline-none mt-32",
+      "w-[99vw] flex justify-center items-center gap-12 outline-none mt-32",
     dots: false,
     fade: false,
     infinite: true,

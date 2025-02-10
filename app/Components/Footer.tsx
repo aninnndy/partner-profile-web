@@ -22,7 +22,7 @@ const ListComponent: React.FC<ListProps> = ({ content, href }) => {
 
 const Footer = () => {
   return (
-    <footer className="w-[100vw] h-[40vh] flex justify-center items-center bg-gradient-to-r from-colorPrimary via-colorPrimaryDark to-colorPrimary mt-32 ">
+    <footer className="h-[40vh] flex justify-center items-center bg-gradient-to-r from-colorPrimary via-colorPrimaryDark to-colorPrimary mt-32 ">
       <div className="container flex flex-col items-center justify-center gap-12">
         {/* List Wrapper */}
         <div className="w-full flex justify-center items-start gap-32">
