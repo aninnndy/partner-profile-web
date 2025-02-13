@@ -29,7 +29,7 @@ const List: React.FC<ListProps> = ({ content, href }) => {
 
 const Navbar = () => {
   return (
-    <nav className="text-base font-medium flex gap-4 bg-white/80 backdrop-blur-sm justify-around items-center h-[10vh] fixed w-full z-20">
+    <nav className="text-base font-medium flex gap-4 bg-white/80 backdrop-blur-sm justify-around items-center h-[10vh] fixed w-full z-50">
       <Image src={Logo} alt="Image Icon" />
       <div className="flex gap-8">
         <List content="Home" href="/" />

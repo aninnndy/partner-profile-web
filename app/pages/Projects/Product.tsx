@@ -6,6 +6,7 @@ import Pagination from "@/app/Components/Projects/Pagination";
 import CardList from "@/app/Json/CardList.json";
 import Image from "next/image";
 import ProjectCategories from "@/app/Components/Projects/ProjectCategories";
+import Link from "next/link";
 
 const Product = () => {
   const [projectCategories, setProjectCategories] = useState("");
@@ -19,8 +20,10 @@ const Product = () => {
     <section className="flex justify-center items-start h-full mt-12 z-50">
       {/* Filter Categories */}
       <div className="section-container flex flex-row gap-8">
-        <nav className="w-[25%] gap-2 bg-white h-[50%] px-5 py-2 rounded-xl">
-          <h2 className="text-xl font-bold py-2 px-2">Project Categories</h2>
+        <nav className="w-[25%] gap-2 bg-white h-[50%] px-5 py-5 rounded-xl">
+          <h2 className="text-2xl font-semibold text-colorBlackSolid py-2 px-2 underline decoration-colorSecondary">
+            Project Categories
+          </h2>
           <ProjectCategories
             content="All Categories"
             value=""
@@ -81,46 +84,74 @@ const Product = () => {
           </div>
 
           {/* Card Wrapper */}
-          <div className="grid grid-cols-3 gap-4 h-[75vh]">
+          <div className="grid grid-cols-3 gap-4 h-[90vh]">
             {filteredCards.length > 0 ? (
               filteredCards.slice(0, 6).map((content, index) => {
-                const productFeatures = content.features.split(" ");
-                const categories = content.categories.replace(/-/g, " ");
+                // const productFeatures = content.features.split(" ");
+                // const categories = content.categories.replace(/-/g, " ");
+                const advantageIcon = content.advantageIcon.split(" ");
+                const advantage = content.advantage.split(" ");
+                const contentParams = content.name
+                  .replace(/ /g, "-")
+                  .toLowerCase();
 
                 return (
                   // Card
                   <div
                     key={index}
-                    className="w-[340px] h-[390px] bg-white rounded-xl"
+                    className="w-[380px] h-[460px] bg-white rounded-xl"
                   >
-                    <Image
-                      src={content.thumbnail}
-                      width={340}
-                      height={100}
-                      alt="Card Image"
-                      className="h-[24vh] object-cover rounded-t-xl cursor-pointer hover:opacity-90 animate"
-                    />
-                    <div className="h-[10vh] px-5 py-3 border-t-4 border-colorSecondary text-colorBlack gap-2 flex flex-col">
+                    <Link href={`/projects/detail/${contentParams}`}>
+                      <Image
+                        src={content.thumbnail}
+                        width={380}
+                        height={100}
+                        alt="Card Image"
+                        className="h-[24vh] object-cover rounded-t-xl cursor-pointer hover:opacity-90 animate"
+                      />
+                    </Link>
+                    <div className="h-[10vh] px-5 py-3 text-colorBlack gap-2 flex flex-col">
                       {/* Card Title */}
                       <div>
                         <h2 className="font-semibold text-xl">
                           {content.name}
                         </h2>
-                        <p className="font-medium text-md">{categories}</p>
+                        <ul className="flex flex-row gap-2 items-center">
+                          {advantage.map((content, index) => (
+                            <li
+                              key={index}
+                              className="flex items-center text-gray-400 text-sm justify-center gap-2"
+                            >
+                              <i
+                                className={`text-sm text-colorSecondary ${advantageIcon[index]}`}
+                              ></i>{" "}
+                              {content.replace(/-/g, " ")}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                       {/* Card Features */}
                       <div>
-                        <h3 className="text-xl font-semibold">Features</h3>
-                        <ul className="flex flex-row flex-wrap gap-2 text-sm">
-                          {productFeatures
-                            .slice(0, 2)
-                            .map((features, index) => (
-                              <li key={index}>
-                                <i className="ri-git-commit-line text-colorSecondary font-semibold"></i>{" "}
-                                {features.replace(/-/g, " ")}
-                              </li>
-                            ))}
-                        </ul>
+                        <h3 className="text-md font-semibold">
+                          Keunggulan Aplikasi
+                        </h3>
+                        <p className="text-sm font-medium">
+                          Aplikasi ini telah membantu beberapa Klien kami
+                          terkait manajemen pasien dan terbukti kualitasnya.
+                        </p>
+                      </div>
+                      {/* Button Group */}
+                      <div className="flex flex-row gap-4">
+                        <button className="bg-gradient-to-r from-colorPrimary to-colorPrimaryDark px-5 py-2 rounded-xl font-semibold text-white flex justify-center items-center gap-2 hover:from-colorPrimary hover:to-colorPrimary ">
+                          Copy
+                          <i className="ri-file-copy-fill"></i>
+                        </button>
+                        <Link
+                          className="font-medium py-2 hover:underline hover:underline-offset-4 hover:decoration-colorSecondary  select-none"
+                          href={`projects/detail/${contentParams}`}
+                        >
+                          Baca Selengkapnya
+                        </Link>
                       </div>
                     </div>
                   </div>
