@@ -9,11 +9,11 @@ const BorderedButton: React.FC<ButtonProps> = ({ content, href }) => {
   return (
     <button
       type="submit"
-      className="relative z-10 flex items-center justify-center gap-2 px-4 py-2 mx-auto overflow-hidden text-lg border-2 rounded-full shadow-xl lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-l before:from-colorPrimary before:to-colorPrimaryDark hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 group text-colorWhite  drop-shadow-md bg-colorBlack/20"
+      className="relative z-10 flex items-center justify-center gap-2 px-4 py-2 mx-auto overflow-hidden text-lg border-2 rounded-full shadow-xl lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-l before:from-colorPrimary before:to-colorPrimaryDark hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-400 group text-colorWhite  drop-shadow-md bg-gradient-to-t from-colorPrimaryDark/20 to-coloWhite/0"
     >
       <Link href={href}>{content}</Link>
       <svg
-        className="justify-end w-8 h-8 p-2 duration-500 ease-linear rotate-45 border rounded-full group-hover:rotate-90 group-hover:bg-gradient-to-r group-hover:from-colorSecondary group-hover:to-colorSecondaryDark border-colorWhite"
+        className="justify-end w-8 h-8 p-2 duration-150 ease-linear rotate-45 border rounded-full group-hover:rotate-90 group-hover:bg-gradient-to-r group-hover:from-colorSecondary group-hover:to-colorSecondaryDark border-colorWhite"
         viewBox="0 0 16 19"
         xmlns="http://www.w3.org/2000/svg"
       >
