@@ -1,23 +1,22 @@
 import BorderedButton from "@/app/Components/Button/BorderedButton";
-import ProjectSlider from "@/app/Components/Slider/ProjectSlider";
 
 const Hero = () => {
   return (
-    <section className="h-[80vh] pt-12 bg-gradient-to-b from-colorPrimary to-colorPrimaryDark flex justify-center flex-col items-center">
-      <div>
-        <ProjectSlider />
-      </div>
-      <div className="flex flex-row justify-center items-center h-full pt-2 container">
-        <div>
+    <section className="h-[60vh] pt-12 bg-gradient-to-b from-colorPrimary to-colorPrimaryDark flex justify-center flex-col items-center">
+      <span className="inline-block w-32 h-32 rounded-full bg-colorSecondary absolute right-52 top-52 blur-2xl"></span>
+
+      <span className="inline-block w-32 h-32 rounded-full bg-colorSecondary absolute left-52 top-52 blur-2xl"></span>
+      <div className="flex flex-row justify-center items-center h-full section-container mt-60 gap-[15%]">
+        <div className="flex justify-center items-start flex-col">
           <h2 className="text-5xl font-bold text-colorWhite/0 bg-gradient-to-l from-colorGray to-colorWhite bg-clip-text py-1">
             Project Terbaik Kami
           </h2>
-          <p className="font-medium  text-white text-xl w-[80%]">
+          <p className="font-medium text-start text-white text-xl w-[80%]">
             Tingkatkan kredibilitas bisnis Anda dengan website yang cepat,
             responsif, dan menarik.
           </p>
         </div>
-        <div className="mt-12">
+        <div className="mt-20">
           <BorderedButton content="Digitalisasi Sekarang" href="/" />
         </div>
       </div>

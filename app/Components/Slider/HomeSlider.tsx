@@ -1,87 +1,59 @@
 "use client";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import BorderedButton from "../Button/BorderedButton";
-import Image from "next/image";
-
-interface SliderProps {
-  title: string;
-  description: string;
-}
-
-const BlankArrow = () => {
-  return (
-    <div>
-      <span></span>
-    </div>
-  );
-};
-
-const SliderComponent: React.FC<SliderProps> = ({ title, description }) => {
-  return (
-    <div className="relative flex flex-col items-center justify-center gap-2 h-96">
-      <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-colorWhiteDark to-colorWhite bg-clip-text">
-        {title}
-      </h1>
-      <p className="text-xl font-semibold text-colorSecondary drop-shadow-md px-4 rounded-full">
-        {description}
-      </p>
-      <Image
-        src="/img/HomeElement.png"
-        alt="Grid Image"
-        layout="fill"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10 grayscale"
-      />
-      <div className="flex flex-row gap-2 pt-2">
-        <BorderedButton content="Digitalisasi Sekarang" href="/" />
-      </div>
-    </div>
-  );
-};
 
 const HomeSlider = () => {
-  const slides = [
-    {
-      title: "Wujudkan Impian Digital Anda",
-      description: "Solusi yang tepat untuk impian digital Anda",
-    },
-    {
-      title: "Aplikasi Berbasis Web",
-      description: "Aplikasi Berbasis Website Tanpa Ribet dan Murah",
-    },
-    {
-      title: "Aplikasi Mobile",
-      description: "Mendukung Interaksi, Transaksi dan Loyalitas Pelanggan",
-    },
-    {
-      title: "Aplikasi Desktop",
-      description: "Mendukung dengan Efisiensi data dan Produktivitas",
-    },
-  ];
-  const settings = {
-    dots: false,
-    fade: true,
-    infinite: true,
-    speed: 800,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    waitForAnimate: false,
-    nextArrow: <BlankArrow />,
-    prevArrow: <BlankArrow />,
-    pauseOnHover: false,
-  };
-
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        {slides.map((slide, index) => (
-          <div key={index}>
-            <SliderComponent {...slide} />
+    <Swiper
+      modules={[Autoplay]}
+      autoplay={{
+        delay: 8000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
+      className="mySwiper rounded-lg bg-white"
+    >
+      <SwiperSlide>
+        <div className="bg-gradient-to-t h-full w-full from-colorPrimary/50 to-colorWhite/0">
+          <div className="bg-[url('/img/HomeElement.png')] bg-cover bg-center flex justify-center h-full w-full items-center flex-col gap-2">
+            <h2 className="text-4xl font-bold bg-clip-text text-colorWhite/0 bg-gradient-to-r from-colorPrimaryDark to-colorPrimary">
+              Aplikasi Berbasis Web
+            </h2>
+            <p className="text-xl font-semibold text-white drop-shadow-md">
+              Aplikasi Web yang sudah teruji dan siap pakai
+            </p>
+            <BorderedButton content="Digitalisasi Sekarang" href="/" />
           </div>
-        ))}
-      </Slider>
-    </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="bg-gradient-to-t h-full w-full from-colorPrimary/50 to-colorWhite/0">
+          <div className="bg-[url('/img/HomeElement.png')] bg-cover bg-center flex justify-center h-full w-full items-center flex-col gap-2">
+            <h2 className="text-4xl font-bold bg-clip-text text-colorWhite/0 bg-gradient-to-r from-colorPrimaryDark to-colorPrimary">
+              Wujudkan Impian Digital Anda
+            </h2>
+            <p className="text-xl font-semibold text-white drop-shadow-md">
+              Solusi yang tepat untuk impian Digital Anda
+            </p>
+            <BorderedButton content="Digitalisasi Sekarang" href="/" />
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="bg-gradient-to-t h-full w-full from-colorPrimary/50 to-colorWhite/0">
+          <div className="bg-[url('/img/HomeElement.png')] bg-cover bg-center flex justify-center h-full w-full items-center flex-col gap-2">
+            <h2 className="text-4xl font-bold bg-clip-text text-colorWhite/0 bg-gradient-to-r from-colorPrimaryDark to-colorPrimary">
+              Aplikasi Mobile
+            </h2>
+            <p className="text-xl font-semibold text-white drop-shadow-md">
+              Mendukung Interaksi dan Loyalitas Pelanggan
+            </p>
+            <BorderedButton content="Digitalisasi Sekarang" href="/" />
+          </div>
+        </div>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
