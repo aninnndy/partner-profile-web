@@ -2,64 +2,48 @@
   {
     "thumbnail": "/img/projects/Clinic-System.png",
     "name": "Fast Medika Center",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Clinic-Management-System",
     "features": "Appointment-Online"
   },
   {
     "thumbnail": "/img/projects/Project-TRM.png",
     "name": "Pertamina",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Total-Relationship-Management",
     "features": "Online-Schedule"
   },
   {
     "thumbnail": "/img/projects/Bank-DJP-Queue.png",
     "name": "Bank DJP",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Queue-System",
     "features": "Loket-Antrian Informasi-Antrian Manajemen-Antrian"
   },
   {
     "thumbnail": "/img/projects/HCMS.png",
     "name": "Birohmatika HCMS",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Human-Capital-Management-System",
     "features": "Form-Login Dashboard-HCMS Menu-Data-Karyawan Data-Slip-Gaji Rekap-Gaji Management-Biaya-Parkir"
   },
   {
     "thumbnail": "/img/projects/Learning-System.png",
     "name": "Birohmatika LMS",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Learning-Management-System",
     "features": "Dashboard-User Kalender-Pelatihan Data-&-Form-Pelatihan Biaya-Pelatihan Bank-Soal"
   },
   {
     "thumbnail": "/img/projects/Project-Android-TV.png",
     "name": "Media Optima",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Project-Android-TV",
     "features": ""
   },
   {
     "thumbnail": "/img/projects/Learning-System-DKI.png",
     "name": "Bank DKI",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "Learning-Management-System",
     "features": "Dashboard-Materi Data-Peserta Pembuatan-Materi Approval-Pelatihan Daily-Exercise Jadwal Sertifikat-Pelatihan"
   },
   {
     "thumbnail": "/img/projects/Value-Star.png",
     "name": "Value Star",
-    "advantageIcon": "ri-user-fill ri-lock-fill ri-speed-up-line",
-    "advantage": "1000 Secured Optimized",
     "categories": "GPS-Tracking",
     "features": "Form-Login Dashboard-HCMS Menu-Data-Karyawan Data-Slip-Gaji Rekap-Gaji Management-Biaya-Parkir"
   }

@@ -7,12 +7,14 @@ const HomeSlider = () => {
   return (
     <Swiper
       modules={[Autoplay]}
+      loop={true}
+      speed={600}
       autoplay={{
-        delay: 8000,
+        delay: 2000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
-      className="mySwiper rounded-lg bg-white"
+      className="homeSwiper rounded-lg bg-white"
     >
       <SwiperSlide>
         <div className="bg-gradient-to-t h-full w-full from-colorPrimary/50 to-colorWhite/0">
